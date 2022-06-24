@@ -37,6 +37,10 @@ export const Percentage = styled.span`
   font-weight: 500;
 `;
 
+function getRandomHexColor(index) {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 export const Item = styled.li`
   display: flex;
   flex-direction: column;
@@ -44,10 +48,5 @@ export const Item = styled.li`
   width: 60px;
   height: 60px;
   align-items: center;
-  background-color: grey;
-
-  ${props => {
-    console.log(props.statistics);
-    props.statistics.map(statistic => <Label>".docx"</Label>);
-  }}
+  background-color: ${props => getRandomHexColor(props.index)};
 `;

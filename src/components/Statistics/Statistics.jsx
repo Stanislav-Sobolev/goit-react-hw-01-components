@@ -18,27 +18,14 @@ export const Statistics = ({ title, stats }) => {
         {title ? <Title>Upload stats</Title> : false}
 
         <StatList>
-          {/* {statistics.map(item => {
+          {statistics.map((item, index) => {
             return (
-              <Item>
-                <Label>.mp3</Label>
-                <Percentage>14%</Percentage>
+              <Item key={item.id} index={index}>
+                <Label>{item.label}</Label>
+                <Percentage>{item.percentage}</Percentage>
               </Item>
             );
-          })} */}
-          {/* <Item statistics={statistics}></Item> */}
-          {/* <Item>
-                        <Label>.mp3</Label>
-                        <Percentage>14%</Percentage>
-                    </Item>
-                    <Item>
-                        <Label>.pdf</Label>
-                        <Percentage>41%</Percentage>
-                    </Item>
-                    <Item>
-                        <Label>.mp4</Label>
-                        <Percentage>12%</Percentage>
-                    </Item> */}
+          })}
         </StatList>
       </Container>
     </Centralize>
