@@ -18,15 +18,15 @@ export const Statistics = ({ title, stats }) => {
         {title ? <Title>Upload stats</Title> : false}
 
         <StatList>
-          {statistics.map(item => {
+          {/* {statistics.map(item => {
             return (
               <Item>
                 <Label>.mp3</Label>
                 <Percentage>14%</Percentage>
               </Item>
             );
-          })}
-          <Item statistics={statistics}></Item>
+          })} */}
+          {/* <Item statistics={statistics}></Item> */}
           {/* <Item>
                         <Label>.mp3</Label>
                         <Percentage>14%</Percentage>
