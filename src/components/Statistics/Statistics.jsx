@@ -10,16 +10,6 @@ import {
   Percentage,
 } from './Statistics.styled';
 
-// export const Statistics = ({ stats }) => {
-//   return (
-//     <Fragment>
-//       {stats.map(stat => {
-//         return <Item key={stat.id} />;
-//       })}
-//     </Fragment>
-//   );
-// };
-
 export const Statistics = ({ title, stats }) => {
   return (
     <Centralize>
@@ -29,7 +19,7 @@ export const Statistics = ({ title, stats }) => {
         <StatList>
           {stats.map((item, index) => {
             return (
-              <Item key={item.id} index={index}>
+              <Item key={item.id}>
                 <Label>{item.label}</Label>
                 <Percentage>{item.percentage}</Percentage>
               </Item>
