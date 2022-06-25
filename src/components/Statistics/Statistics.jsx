@@ -35,8 +35,3 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.array,
 };
-
-Item.propTypes = {
-  key: PropTypes.number,
-  index: PropTypes.number,
-};
