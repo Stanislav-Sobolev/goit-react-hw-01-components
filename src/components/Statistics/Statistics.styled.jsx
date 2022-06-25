@@ -1,13 +1,8 @@
+import { color, space, layout, flexbox, shadow } from 'styled-system';
 import styled from '@emotion/styled';
 
-export const Container = styled.section`
-  margin-top: 15px;
-  display: inline-flex;
-  flex-direction: column;
-  background-color: ${props => props.theme.colors.bg};
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-`;
+export const Box = styled('div')(color, space, layout, flexbox, shadow);
+
 export const Centralize = styled.div`
   display: flex;
   justify-content: center;

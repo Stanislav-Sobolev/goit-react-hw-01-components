@@ -10,6 +10,7 @@ const theme = {
     accent: 'orangered',
     bg: 'aliceblue',
   },
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
