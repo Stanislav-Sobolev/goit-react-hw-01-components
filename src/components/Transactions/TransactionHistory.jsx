@@ -1,0 +1,36 @@
+import { TdStyled, TrStyled, TheadStyled } from './TransactionHistory.styled';
+
+const Tr = ({ id, type, amount, currency, index }) => (
+  <TrStyled index={index}>
+    <TdStyled>{type}</TdStyled>
+    <TdStyled>{amount}</TdStyled>
+    <TdStyled>{currency}</TdStyled>
+  </TrStyled>
+);
+
+const Thead = () => (
+  <TheadStyled>
+    <tr>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Currency</th>
+    </tr>
+  </TheadStyled>
+);
+
+export const TransactionHistory = ({ items }) => (
+  <table>
+    <Thead />
+    <tbody>
+      {items.map((prop, index) => (
+        <Tr
+          key={prop.id}
+          ype={prop.type}
+          amount={prop.amount}
+          currency={prop.currency}
+          index={index}
+        ></Tr>
+      ))}
+    </tbody>
+  </table>
+);
