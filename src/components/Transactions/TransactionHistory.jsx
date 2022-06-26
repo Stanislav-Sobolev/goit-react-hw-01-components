@@ -1,4 +1,9 @@
-import { TdStyled, TrStyled, TheadStyled } from './TransactionHistory.styled';
+import {
+  Table,
+  TdStyled,
+  TrStyled,
+  TheadStyled,
+} from './TransactionHistory.styled';
 
 const Tr = ({ id, type, amount, currency, index }) => (
   <TrStyled index={index}>
@@ -19,18 +24,18 @@ const Thead = () => (
 );
 
 export const TransactionHistory = ({ items }) => (
-  <table>
+  <Table>
     <Thead />
     <tbody>
       {items.map((prop, index) => (
         <Tr
           key={prop.id}
-          ype={prop.type}
+          type={prop.type}
           amount={prop.amount}
           currency={prop.currency}
           index={index}
         ></Tr>
       ))}
     </tbody>
-  </table>
+  </Table>
 );
