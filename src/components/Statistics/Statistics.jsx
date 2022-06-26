@@ -24,7 +24,7 @@ export const Statistics = ({ title, stats }) => {
         {title ? <Title>{title}</Title> : false}
 
         <StatList>
-          {stats.map((item, index) => {
+          {stats.map(item => {
             return (
               <Item key={item.id}>
                 <Label>{item.label}</Label>

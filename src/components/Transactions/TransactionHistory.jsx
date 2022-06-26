@@ -5,6 +5,8 @@ import {
   TheadStyled,
 } from './TransactionHistory.styled';
 
+import { Component } from 'react';
+
 const Tr = ({ id, type, amount, currency, index }) => (
   <TrStyled index={index}>
     <TdStyled>{type}</TdStyled>
