@@ -34,7 +34,7 @@ export const TransactionHistory = ({ items }) => (
           amount={prop.amount}
           currency={prop.currency}
           index={index}
-        ></Tr>
+        />
       ))}
     </tbody>
   </Table>
